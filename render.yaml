@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: intr_pr5
+    env: docker
+    buildCommand: ./gradlew build
+    startCommand: java -jar build/libs/*.jar
+    docker:
+      dockerfilePath: ./Dockerfile
+    autoDeploy: true
